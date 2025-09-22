@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Settings, Zap, Shield } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,44 +9,31 @@ const Hero = () => {
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
         top: elementPosition,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
     }
   };
-
-  return (
-    <section 
-      id="inicio" 
-      className="pt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: `url(${heroBackground})` }}
-    >
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+  return <section id="inicio" className="pt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative" style={{
+    backgroundImage: `url(${heroBackground})`
+  }}>
+      <div className="absolute inset-0 backdrop-blur-sm bg-[#fcf6f6]/[0.09]"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Trausi Consultoria
             </h1>
-            <h2 className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <h2 className="text-xl mb-8 leading-relaxed text-zinc-950 lg:text-2xl">
               Soluções personalizadas em automação industrial com foco na excelência, 
               utilizando tecnologias avançadas para otimizar processos e promover a 
               transformação digital nas indústrias.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
-                onClick={() => scrollToSection('servicos')}
-              >
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 group" onClick={() => scrollToSection('servicos')}>
                 Nossos serviços
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                onClick={() => window.open('https://wa.me/5511953406886', '_blank')}
-              >
+              <Button variant="outline" size="lg" className="border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" onClick={() => window.open('https://wa.me/5511953406886', '_blank')}>
                 Fale conosco
               </Button>
             </div>
@@ -79,8 +65,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
