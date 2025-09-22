@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in-up">
+          <div className="animate-fade-in-up bg-white/80 backdrop-blur-sm rounded-xl p-8">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Trausi Consultoria
             </h1>
