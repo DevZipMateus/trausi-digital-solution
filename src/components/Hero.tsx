@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Settings, Zap, Shield } from 'lucide-react';
+import heroBackground from '@/assets/hero-background.jpg';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -15,8 +16,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="pt-20 min-h-screen industrial-gradient flex items-center">
-      <div className="container mx-auto px-4">
+    <section 
+      id="inicio" 
+      className="pt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${heroBackground})` }}
+    >
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
