@@ -87,23 +87,25 @@ const Gallery = () => {
                 <CardTitle className="text-2xl text-primary">{category.title}</CardTitle>
                 <CardDescription className="text-base">{category.description}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {category.videos.map((video, videoIndex) => (
-                  <div key={videoIndex} className="space-y-2">
-                    <h4 className="font-semibold text-foreground">{video.title}</h4>
-                    <div className="aspect-video rounded-lg overflow-hidden border border-border">
-                      <video
-                        className="w-full h-full object-cover"
-                        controls
-                        preload="metadata"
-                        poster=""
-                      >
-                        <source src={video.src} type="video/mp4" />
-                        Seu navegador não suporta o elemento de vídeo.
-                      </video>
+              <CardContent className={`${category.videos.length === 1 ? 'pb-6' : 'space-y-4'}`}>
+                <div className={`${category.videos.length === 1 ? 'flex justify-center' : 'space-y-4'}`}>
+                  {category.videos.map((video, videoIndex) => (
+                    <div key={videoIndex} className={`space-y-2 ${category.videos.length === 1 ? 'w-full max-w-md' : ''}`}>
+                      <h4 className="font-semibold text-foreground text-center">{video.title}</h4>
+                      <div className="aspect-video rounded-lg overflow-hidden border border-border">
+                        <video
+                          className="w-full h-full object-cover"
+                          controls
+                          preload="metadata"
+                          poster=""
+                        >
+                          <source src={video.src} type="video/mp4" />
+                          Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}
