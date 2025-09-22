@@ -13,7 +13,7 @@ const Hero = () => {
       });
     }
   };
-  return <section id="inicio" className="pt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative" style={{
+  return <section id="inicio" className="mt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative" style={{
     backgroundImage: `url(${heroBackground})`
   }}>
       <div className="absolute inset-0 backdrop-blur-sm bg-[#fcf6f6]/[0.09]"></div>
