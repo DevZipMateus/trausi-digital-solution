@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Settings, Zap, Shield } from 'lucide-react';
-import heroBackground from '@/assets/hero-background-new.jpg';
+import heroBackground from '@/assets/hero-background-robot.jpg';
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
