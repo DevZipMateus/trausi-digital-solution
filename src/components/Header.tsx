@@ -35,7 +35,7 @@ const Header = () => {
             <img 
               src="/logo-trausi.png" 
               alt="Trausi Consultoria" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           
