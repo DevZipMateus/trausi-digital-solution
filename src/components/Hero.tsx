@@ -16,7 +16,7 @@ const Hero = () => {
   return <section id="inicio" className="mt-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat relative" style={{
     backgroundImage: `url(${heroBackground})`
   }}>
-      <div className="absolute inset-0 backdrop-blur-sm bg-[#fcf6f6]/[0.09]"></div>
+      <div className="absolute inset-0 backdrop-blur-sm bg-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
